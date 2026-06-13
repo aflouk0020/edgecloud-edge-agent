@@ -7,6 +7,11 @@ MONITORING_SERVICE_URL = os.getenv(
     "http://localhost:8082/telemetry"
 )
 
+DEVICE_SERVICE_URL = os.getenv(
+    "DEVICE_SERVICE_URL",
+    "http://localhost:8083/heartbeat"
+)
+
 SIMULATION_MODE = os.getenv("SIMULATION_MODE", "true").lower() == "true"
 
 REQUEST_TIMEOUT_SECONDS = int(os.getenv("REQUEST_TIMEOUT_SECONDS", "10"))
